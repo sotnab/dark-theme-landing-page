@@ -1,0 +1,59 @@
+$breakpoint: 700px;
+
+$intro-bg: hsl(217, 28%, 15%);
+$main-bg: hsl(218, 28%, 13%);
+$footer-bg: hsl(216, 53%, 9%);
+$testimonals-bg: hsl(219, 30%, 18%);
+
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+$light-red: hsl(0, 100%, 63%);
+$white: hsl(0, 0%, 100%);
+
+$open-sans-font: 'Open Sans', sans-serif;
+$raleway-font: 'Raleway', sans-serif;
+
+@mixin flex {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+
+   font-size: 15px;
+   font-family: $raleway-font;
+   color: $white;
+   text-align: center;
+
+   @media (min-width: $breakpoint) {
+      font-size: 18px;
+   }
+}
+
+img {
+   display: block;
+   width: 100%;
+}
+
+div,
+section,
+article {
+   position: relative;
+}
+
+.wrapper {
+   @media (min-width: $breakpoint) {
+      max-width: 1200px;
+      margin: 0 auto;
+   }
+}
